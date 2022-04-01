@@ -25,6 +25,11 @@ public class TicTacToeBoard {
         counto++;
       }
     }
+
+  /**
+   * Checks the state of the board (unreachable, no winner, X wins, or O wins)
+   * @return an enum value corresponding to the board evaluation
+   */
     if(Math.abs(counto-countx)>=2){
       return Evaluation.UnreachableState;
     }
@@ -61,25 +66,4 @@ public class TicTacToeBoard {
       return true;
     return (boardLower.charAt(2)==ch && boardLower.charAt(4)==ch && boardLower.charAt(6)==ch);
   }
-  /**
-   * Checks the state of the board (unreachable, no winner, X wins, or O wins)
-   * @return an enum value corresponding to the board evaluation
-   */
- /* public static void main(String args[]){
-    System.out.println(evaluateBoard("O...X.X.."));
-
-    System.out.println(evaluateBoard("XXX...oo."));
-    System.out.println(evaluateBoard("...Xxx.oo"));
-    System.out.println(evaluateBoard("oo....xxx"));
-    System.out.println(evaluateBoard("x..x..xoo"));
-    System.out.println(evaluateBoard(".x..xoox."));
-    System.out.println(evaluateBoard("..xoox..x"));
-    System.out.println(evaluateBoard("x...x.oox"));
-    System.out.println(evaluateBoard("..x.x.xoo"));
-    System.out.println(evaluateBoard("O.."));
-    System.out.println(evaluateBoard("O...X.X...."));
-    System.out.println(evaluateBoard("Oooxxx..."));
-    System.out.println(evaluateBoard("oxooxooxo"));
-  }
-*/
 }
